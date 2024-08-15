@@ -3,7 +3,7 @@ const router  = express.Router()
 import Products from "./../controllers/products.js"
 import servidor from "./../server.js"
 
-// devuelve todos los productos en formato json
+// devuelve todos los productos con filtros, paginación y ordenamiento
 router.get("/", (req, res) => {
   const iproducts = new Products();
   iproducts.getProducts(req.query.limit,req.query.page,req.query.query,req.query.sort)
