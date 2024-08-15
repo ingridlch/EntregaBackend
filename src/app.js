@@ -11,7 +11,7 @@ const PORT = 8080
 servidor.app.use(express.json())
 servidor.app.use(express.urlencoded({extended:true}))
 
-mongoose.connect("mongodb+srv://user:user@codercluster.cf9yy1h.mongodb.net/coderbase?retryWrites=true&w=majority&appName=CoderCluster")
+mongoose.connect("MONGO_URL")
 .then(()=>console.log("conectado a la db"))
 .catch(error=>console.error("error en conexion a la db", error))
 
